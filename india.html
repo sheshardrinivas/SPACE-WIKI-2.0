@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="shortcut icon" type="x-icon" href="Screenshot (47).png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MUSEUM OF MISSIONS HELD BY INDIA</title>
+</head>
+<body style="text-align: left; background-image: url(1920x1080.jpg);">
+    <img src="Screenshot (65).png" width="35px" height="35px">
+    <center>
+        <header style="color: white;font-family: 'Courier New', Courier, monospace; font-size: larger;">MUSEUM OF MISSIONS HELD BY INDIA</header>
+        <br>
+        <h1 style="color:white; font-size: medium;" id="in">Press Right Arrow Key For Next And Left For Back.</h1>
+        <br>
+        
+        <br>
+        <br>
+<img src="Screenshot (49).png" width="400px"height="590px" id="img1">
+<br>
+
+<br><samp>
+<button onclick="next()" style="color:white; width: 30%; background-color: black;">NEXT</button> <button onclick="back()" style="color: white; width: 30%; background-color: black;">BACK</button> 
+</samp>
+<br>
+
+
+
+
+
+
+
+
+
+    </center>
+   <script>
+   
+    var ch= document.getElementById("img1");
+    valuefor=["https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/CY1_2007_%28cropped%29.jpg/450px-CY1_2007_%28cropped%29.jpg","https://upload.wikimedia.org/wikipedia/commons/f/f4/Chandrayaan-2_lander_and_orbiter_integrated_module.jpg","https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Mars_Orbiter_Mission_Over_Mars_%2815237158879%29.jpg/413px-Mars_Orbiter_Mission_Over_Mars_%2815237158879%29.jpg","https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Astrosat-1_in_deployed_configuration_001.png/450px-Astrosat-1_in_deployed_configuration_001.png","https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/Aditya_L1.jpg/450px-Aditya_L1.jpg","https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/X-ray_Polarimeter_satellite_%28XPoSat%29_in_deployed_configuration.jpg/450px-X-ray_Polarimeter_satellite_%28XPoSat%29_in_deployed_configuration.jpg","https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Gaganyaan_crewed_spacecraft_in_deployed_twin_solar_panel_configuration.png/450px-Gaganyaan_crewed_spacecraft_in_deployed_twin_solar_panel_configuration.png","https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Gaganyaan_crewed_spacecraft_in_deployed_twin_solar_panel_configuration.png/450px-Gaganyaan_crewed_spacecraft_in_deployed_twin_solar_panel_configuration.png","https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/NISAR_artist_concept.jpg/420px-NISAR_artist_concept.jpg","https://cdn.telanganatoday.com/wp-content/uploads/2020/11/Shukrayaan.jpg","https://upload.wikimedia.org/wikipedia/commons/6/6b/Mars_Orbiter_Mission_Over_Mars_%2815237158879%29.jpg","https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Gaganyaan_crewed_spacecraft_in_deployed_twin_solar_panel_configuration.png/450px-Gaganyaan_crewed_spacecraft_in_deployed_twin_solar_panel_configuration.png","https://static.toiimg.com/photo/msid-76348171/76348171.jpg","https://www.insightsonindia.com/wp-content/uploads/2020/08/astrosat.jpg"]
+    
+cha=-1;
+window.addEventListener("keydown",my_keydown)
+function my_keydown(e){
+keyPressed=e.keyCode;
+console.log(keyPressed);
+if (keyPressed==39) {
+   cha=cha+1; 
+   ch.src=valuefor[cha];
+  
+   document.getElementById("in").style.display="none";
+}
+if (keyPressed==37) {
+ cha=cha-1; 
+ ch.src=valuefor[cha]; 
+
+}
+if (cha>=14) {
+   cha=0; 
+   ch.src=valuefor[cha]; 
+  
+}
+
+
+}
+function next(){
+    cha=cha+1; 
+   ch.src=valuefor[cha];
+   document.getElementById("in").style.display="none";
+  
+
+   if (cha>=14) {
+   cha=0; 
+   ch.src=valuefor[cha]; 
+}
+
+}
+function back(){
+    cha=cha-1; 
+   ch.src=valuefor[cha];
+   document.getElementById("in").style.display="none";
+  
+
+   if (cha>=14) {
+   cha=0; 
+   ch.src=valuefor[cha]; 
+}
+
+}
+
+   </script>
+</body>
+</html>
